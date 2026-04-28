@@ -15,6 +15,15 @@ ul {
   list-style: none;
 }
 
+p {
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: move 4s linear infinite;
+}
+
 header {
   background-image: url("../imgs/header_bg.png");
   z-index: 1;
@@ -36,6 +45,12 @@ header nav .container .link {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: move 4s linear infinite;
 }
 header nav .container .link li {
   cursor: pointer;
@@ -57,6 +72,12 @@ header nav .container .applink {
   align-items: center;
   gap: 20px;
   font-size: 40px;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: move 4s linear infinite;
 }
 header .hero .container {
   padding: 100px 50px;
@@ -68,6 +89,12 @@ header .hero .container .card {
 header .hero .container .card h3 {
   padding-bottom: 20px;
   font-weight: 400;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: move 4s linear infinite;
 }
 header .hero .container .card .hero_btns {
   display: flex;
@@ -438,4 +465,40 @@ header .hero .container .header_bg_letter {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   animation: move 4s linear infinite;
+}
+
+footer {
+  background-color: rgba(33, 42, 94, 0.8352941176);
+}
+footer .container {
+  padding: 50px 0px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+footer .container .footer_card {
+  width: 300px;
+  border-right: 1px solid white;
+}
+footer .container .footer_card p {
+  padding-bottom: 20px;
+}
+footer .container .footer_card h2 {
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: move 4s linear infinite;
+}
+footer .container ul {
+  line-height: 30px;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: move 4s linear infinite;
+  border-right: 1px solid white;
+  padding-right: 10px;
 }/*# sourceMappingURL=main.css.map */
