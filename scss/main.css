@@ -15,19 +15,29 @@ ul {
   list-style: none;
 }
 
-nav .container {
+header {
+  background-image: url("../imgs/header_bg.png");
+  z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding-bottom: 100px;
+  position: relative;
+}
+header nav .container {
   padding: 30px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-nav .container .link {
+header nav .container .link {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
 }
-nav .container .link li {
+header nav .container .link li {
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid transparent;
@@ -35,16 +45,397 @@ nav .container .link li {
   width: 100%;
   padding: 5px;
 }
-nav .container .link li:hover {
+header nav .container .link li:hover {
   width: 100%;
   padding: 5px;
   border: 1px solid;
   border-radius: 50px;
   background: linear-gradient(-90deg, rgba(255, 255, 255, 0.219), rgba(0, 0, 255, 0.699));
 }
-nav .container .applink {
+header nav .container .applink {
   display: flex;
   align-items: center;
   gap: 20px;
   font-size: 40px;
+}
+header .hero .container {
+  padding: 100px 50px;
+}
+header .hero .container .card {
+  width: 400px;
+  z-index: 1;
+}
+header .hero .container .card h3 {
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+header .hero .container .card .hero_btns {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header .hero .container .card .hero_btns button:nth-of-type(1) {
+  padding: 3px 20px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+header .hero .container .card .hero_btns button:nth-of-type(1):hover {
+  transform: scale(1.1);
+}
+header .hero .container .card .hero_btns button:nth-of-type(1):active {
+  transform: scale(0.9);
+}
+header .hero .container .card .hero_btns button:nth-of-type(2) {
+  padding: 3px 20px;
+  border-radius: 50px;
+  border: none;
+  background-color: white;
+  color: #415899;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+header .hero .container .card .hero_btns button:nth-of-type(2):hover {
+  transform: scale(1.1);
+}
+header .hero .container .card .hero_btns button:nth-of-type(2):active {
+  transform: scale(0.9);
+}
+header .hero .container .header_bg_letter {
+  position: absolute;
+  z-index: -3;
+  top: 200px;
+  left: 300px;
+  color: rgba(255, 255, 255, 0.24);
+  font-size: 100px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.08));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 4s linear infinite;
+}
+@keyframes shine {
+  from {
+    background-position: -200%;
+  }
+  to {
+    background-position: 200%;
+  }
+}
+
+#ekran {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+#ekran.ochil {
+  animation: kirish 2s ease forwards;
+  z-index: 999;
+}
+
+@keyframes kirish {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+    filter: blur(20px);
+  }
+  30% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    filter: blur(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(15px);
+    visibility: hidden;
+  }
+}
+.intro {
+  background-color: #212A5E;
+}
+.intro .container {
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.intro .container .intro_box1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 500px;
+  gap: 20px;
+}
+.intro .container .intro_box1 .intro_cards {
+  width: 200px;
+  height: 200px;
+}
+.intro .container .intro_box1 .intro_cards img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.intro .container .intro_box1 .intro_ccard {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  border-radius: 20px;
+  animation: move 4s linear infinite;
+  background-size: 200%;
+  background-position: 0%;
+}
+.intro .container .intro_box1 .intro_ccard .intro_info {
+  width: 99%;
+  height: 99%;
+  background-color: #212A5E;
+}
+.intro .container .intro_box1 .intro_ccard .intro_info .title {
+  font-size: 25px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 4s linear infinite;
+}
+.intro .container .intro_box1 .intro_ccard .intro_info P {
+  padding: 30px 0px;
+  color: white;
+  font-size: 20px;
+}
+.intro .container .intro_box1 .intro_ccard .intro_info .bottom {
+  font-size: 25px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 4s linear infinite;
+}
+.intro .container .intro_box1 .intro_ccard .intro_info .bottom h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@keyframes move {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 200%;
+  }
+}
+.intro .container .intro_box2 {
+  width: 500px;
+}
+.intro .container .intro_box2 .title {
+  padding: 30px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 4s linear infinite;
+}
+.intro .container .intro_box2 .intro_box2_img {
+  width: 500px;
+  height: 400px;
+  border-radius: 20px;
+  position: relative;
+  animation: floatPhone 4s ease-in-out infinite;
+  margin-left: 200px;
+}
+.intro .container .intro_box2 .intro_box2_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.intro .container .intro_box2 .intro_box2_img i {
+  position: absolute;
+  top: 20%;
+  left: 50px;
+  font-size: 30px;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 4s linear infinite;
+  animation: floatUser 3s ease-in-out infinite;
+}
+.intro .container .intro_box2 .intro_box2_img i:nth-of-type(2) {
+  top: 0;
+  left: 300px;
+  animation-delay: 0.8s;
+}
+.intro .container .intro_box2 .intro_box2_img i:nth-of-type(3) {
+  top: 15%;
+  left: 200px;
+  animation-delay: 1.4s;
+}
+@keyframes floatPhone {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0px) rotate(-8deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-18px) rotate(-6deg);
+  }
+}
+@keyframes floatUser {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-18px) scale(1.08);
+  }
+}
+
+.second {
+  background-color: #212A5E;
+}
+.second .container {
+  padding: 200px 0px;
+}
+.second .container .second_title {
+  text-align: center;
+  padding: 50px 0px;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: move 4s linear infinite;
+}
+.second .container .second_box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 200px;
+}
+.second .container .second_box img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all 0.3s ease;
+}
+.second .container .second_box img:hover {
+  transform: translateY(-12px) scale(1.15);
+}
+.second .container .second_box img:nth-of-type(1) {
+  position: absolute;
+  top: -300px;
+}
+.second .container .second_box img:nth-of-type(2) {
+  position: absolute;
+  top: -300px;
+  right: 50px;
+}
+.second .container .second_box img:nth-of-type(3) {
+  position: absolute;
+  top: 100px;
+}
+.second .container .second_box img:nth-of-type(4) {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+}
+.second .container .second_box img:nth-of-type(5) {
+  position: absolute;
+  top: -20px;
+  left: 450px;
+}
+
+.third {
+  background-color: #212A5E;
+}
+.third .container {
+  padding: 100px 0px;
+}
+.third .container .third_title {
+  font-size: 20px;
+  padding: 30px 0px;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: move 4s linear infinite;
+}
+.third .container .third_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.third .container .third_box .third_card:nth-of-type(1) {
+  width: 400px;
+  color: white;
+  background-color: #4F7781;
+  padding: 20px;
+}
+.third .container .third_box .third_card:nth-of-type(1) h1:nth-of-type(1) {
+  font-size: 50px;
+  font-weight: 400;
+}
+.third .container .third_box .third_card:nth-of-type(1) h1:nth-of-type(2) {
+  font-size: 40px;
+}
+.third .container .third_box .third_card:nth-of-type(1) p {
+  font-weight: 300;
+  padding: 20px 0px;
+}
+.third .container .third_box .third_card:nth-of-type(1) .third_narx {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.third .container .third_box .third_card:nth-of-type(1) .third_narx button:nth-of-type(1) {
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: none;
+  background-color: #212A5E;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.third .container .third_box .third_card:nth-of-type(1) .third_narx button:nth-of-type(1):hover {
+  transform: scale(1.1);
+}
+.third .container .third_box .third_card:nth-of-type(1) .third_narx button:nth-of-type(1):active {
+  transform: scale(0.9);
+}
+.third .container .third_box .third_card:nth-of-type(1) .third_narx button:nth-of-type(2) {
+  padding: 10px 10px;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(90deg, #ffffff, #8cffc1, #6f84ff, #3017ff);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: move 4s linear infinite;
 }/*# sourceMappingURL=main.css.map */
